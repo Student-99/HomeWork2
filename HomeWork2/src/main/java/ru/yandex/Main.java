@@ -10,8 +10,9 @@ public class Main {
             .withLoc(loc)
             .withLot(lot)
             .withSky("sky1")
-            .withQuantity(99999L)
             .build();
+
+        System.out.println("SerialInventory = "+SerialInventory.getQuantity());
         System.out.println(serialInventory);
     }
 }

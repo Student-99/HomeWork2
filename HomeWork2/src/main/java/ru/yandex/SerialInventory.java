@@ -7,17 +7,18 @@ public class SerialInventory {
     private Sky sky;
     private Lot lot;
     private Loc loc;
-    private Long quantity;
+    private static Long quantity = 0L;
 
     private SerialInventory() {
+
     }
 
-    public SerialInventory(Sky sky, Lot lot, Loc loc, Long quantity) {
+    public SerialInventory(Sky sky, Lot lot, Loc loc) {
         this.serialKey = new Random().nextLong();
         this.sky = sky;
         this.lot = lot;
         this.loc = loc;
-        this.quantity = quantity;
+        quantity++;
     }
 
     public Long getSerialKey() {
@@ -36,7 +37,7 @@ public class SerialInventory {
         return loc;
     }
 
-    public Long getQuantity() {
+    public static Long getQuantity() {
         return quantity;
     }
 
